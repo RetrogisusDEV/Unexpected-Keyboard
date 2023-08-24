@@ -30,12 +30,29 @@ public class SettingsActivity extends PreferenceActivity
       system is using light theme. */
   void detectSystemTheme()
   {
-    if (Build.VERSION.SDK_INT >= 14)
+    if (Build.VERSION.SDK_INT >= 14 && Build.VERSION.SDK_INT <= 19)
     {
       int ui_mode = getResources().getConfiguration().uiMode;
-      if ((ui_mode & Configuration.UI_MODE_NIGHT_NO) != 0)
-        setTheme(android.R.style.Theme_DeviceDefault_Light);
+   
+   if ((ui_mode & Configuration.UI_MODE_NIGHT_NO) != 0) {
+setTheme(android.R.style.Theme_Holo_Light);
+}else{
+setTheme(android.R.style.Theme_Holo
+}
+
+
     }
+
+if (Build.VERSION.SDK_INT >= 21)
+    {
+
+int ui_mode = getResources().getConfiguration().uiMode;
+   
+   if ((ui_mode & Configuration.UI_MODE_NIGHT_NO) != 0) {
+setTheme(android.R.style.Theme_Material_Light);
+}else{
+setTheme(android.R.style.Theme_Material
+}}
   }
 
   void fallbackEncrypted()
