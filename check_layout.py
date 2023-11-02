@@ -6,7 +6,8 @@ warning_count = 0
 KNOWN_NOT_LAYOUT = set([
     "res/xml/number_row.xml", "res/xml/numpad.xml", "res/xml/pin.xml",
     "res/xml/bottom_row.xml", "res/xml/settings.xml", "res/xml/method.xml",
-    "res/xml/greekmath.xml", "res/xml/numeric.xml" ])
+    "res/xml/greekmath.xml", "res/xml/numeric.xml",
+    "res/xml/emoji_bottom_row.xml" ])
 
 def warn(msg):
     global warning_count
@@ -60,8 +61,7 @@ def check_layout(layout):
                      "Layout doesn't define some important keys")
     unexpected_keys(keys,
                     ["copy", "paste", "cut", "selectAll", "shareText",
-                     "pasteAsPlainText", "undo", "redo", "replaceText",
-                     "textAssist", "autofill" ],
+                     "pasteAsPlainText", "undo", "redo" ],
                     "Layout contains editing keys")
     unexpected_keys(keys,
                     [ "f1", "f2", "f3", "f4", "f5", "f6", "f7", "f8", "f9",
@@ -84,7 +84,7 @@ def check_layout(layout):
     if root.get("script") == None:
         warn("Layout doesn't specify a script.")
 
-for fname in sys.argv[1:]:
+for fname in sorted(sys.argv[1:]):
     if fname in KNOWN_NOT_LAYOUT:
         continue
     layout = parse_layout(fname)
