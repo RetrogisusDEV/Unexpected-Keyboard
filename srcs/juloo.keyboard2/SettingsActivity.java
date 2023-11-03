@@ -30,7 +30,7 @@ public class SettingsActivity extends PreferenceActivity
       system is using light theme. */
   void detectSystemTheme()
   {
-    if (Build.VERSION.SDK_INT >= 14 && Build.VERSION.SDK_INT <= 19)
+    if (Build.VERSION.SDK_INT >= 14 && Build.VERSION.SDK_INT <= 20)
     {
       int ui_mode = getResources().getConfiguration().uiMode;
    
