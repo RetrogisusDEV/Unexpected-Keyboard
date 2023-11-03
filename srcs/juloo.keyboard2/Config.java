@@ -326,7 +326,7 @@ final class Config
       case "epaper": return R.style.ePaper;
         case "Lightv2": return R.style.Lightv2;
         case "Darkv2": return R.style.Darkv2;
-        case "Amoled": return R.style.Amoled;
+        case "DarkBlue": return R.style.DarkBlue;
         case "Desert": return R.style.Desert;
         case "Jungle": return R.style.Jungle;
       default:
