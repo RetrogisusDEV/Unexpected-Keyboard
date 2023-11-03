@@ -22,4 +22,7 @@
     <item name="android:layout_marginHorizontal">16dp</item>
     <item name="android:layout_gravity">center</item>
   </style>
+  <style name="KeyboardSettings" parent="@android:style/Theme.Material.Light"><item name="android:colorBackground">#ffefefff</item><item name="android:textColorPrimary">#ff111111</item><item name="android:windowBackground">#ffefefff</item><item name="android:colorPrimary">#ffe0e2ee</item><item name="android:colorPrimaryDark">#ffe0e2ee</item><item name="android:colorAccent">#ff2962ff</item><item name="android:statusBarColor">#ffe0e2ee</item><item name="android:navigationBarColor">#ffefefff</item></style>
+
+<style name="AppTheme" parent="@style/KeyboardSettings" />
 </resources>
