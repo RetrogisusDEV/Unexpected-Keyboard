@@ -49,7 +49,7 @@ if (Build.VERSION.SDK_INT >= 21)
 int ui_mode = getResources().getConfiguration().uiMode;
    
    if ((ui_mode & Configuration.UI_MODE_NIGHT_NO) != 0) {
-setTheme(android.R.style.Theme_Material_Light);
+setTheme(R.style.AppTheme);
 }else{
 setTheme(android.R.style.Theme_Material
 }}
