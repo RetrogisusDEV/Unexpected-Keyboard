@@ -51,6 +51,13 @@ public final class Config
   public float key_horizontal_margin;
   public int labelBrightness; // 0 - 255
   public int keyboardOpacity; // 0 - 255
+  public int keyColorBgR;	
+  public int keyColorBgB;	 
+  public int keyColorBgG;	
+  public int keyboardColorBgR;
+  public int keyboardColorBgB;
+  public int keyboardColorBgG;
+  public boolean customColor;  
   public float customBorderRadius; // 0 - 1
   public float customBorderLineWidth; // dp
   public int keyOpacity; // 0 - 255
