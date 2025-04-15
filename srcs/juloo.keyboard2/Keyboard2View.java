@@ -349,7 +349,7 @@ public class Keyboard2View extends View
   {
     // set Keyboard background color
     int keyColor = Color.parseColor(String.format("#%02X%02X%02X%02X", 255, _config.keyColorBgR, _config.keyColorBgG, _config.keyColorBgB));
-    int keyboardColor = Color.parseColor(String.format("#%02X%02X%02X%02X", 255, _config.keyboardColorBgR, _config.keyboardColorBgG, _config.keyboardColorBgB ););
+    int keyboardColor = Color.parseColor(String.format("#%02X%02X%02X%02X", 255, _config.keyboardColorBgR, _config.keyboardColorBgG, _config.keyboardColorBgB ));
     if (_config.customColor)
     {
       _theme.colorKey.setColor(keyColor);
