@@ -39,7 +39,7 @@ public class Theme
     TypedArray s = context.getTheme().obtainStyledAttributes(attrs, R.styleable.keyboard, 0, 0);
     colorKey = s.getColor(R.styleable.keyboard_colorKey, 0);
     colorKeyActivated = s.getColor(R.styleable.keyboard_colorKeyActivated, 0);
-    // colorKeyboard = s.getColor(R.styleable.keyboard_colorKeyboard, 0);
+    colorKeyboard = s.getColor(R.styleable.keyboard_colorKeyboard, 0);
     colorNavBar = s.getColor(R.styleable.keyboard_navigationBarColor, 0);
     isLightNavBar = s.getBoolean(R.styleable.keyboard_windowLightNavigationBar, false);
     labelColor = s.getColor(R.styleable.keyboard_colorLabel, 0);
