@@ -343,6 +343,17 @@ public class Keyboard2View extends View
     Vertical.BOTTOM, Vertical.CENTER, Vertical.CENTER, Vertical.TOP,
     Vertical.BOTTOM
   };
+  
+  public static int parseColorHex(String hex) {
+  if (hex.startsWith("#")) {
+    hex = hex.substring(1);
+    }
+  long color = Long.parseLong(hex, 16);
+  if (hex.length() == 6) {
+    color |= 0xFF000000; // Agrega el canal alfa si no está presente
+    }
+  return (int) color;
+  }
 
   @Override
   protected void onDraw(Canvas canvas)
@@ -350,8 +361,8 @@ public class Keyboard2View extends View
     // set Keyboard background color
     String ckey = String.format("#%02X%02X%02X%02X", 255, _config.keyColorBgR, _config.keyColorBgG, _config.keyColorBgB);
     String cboard = String.format("#%02X%02X%02X%02X", 255, _config.keyboardColorBgR, _config.keyboardColorBgG, _config.keyboardColorBgB);
-    int ckeyColor = Color.parseColor(ckey);
-    int ckeyboardColor = Color.parseColor(cboard);
+    int ckeyColor = parseColorHex(ckey);
+    int ckeyboardColor = parseColorHex(cboard);
     if (_config.customColor)
     {
       _theme.colorKey.setColor(ckeyColor);
