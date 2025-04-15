@@ -369,8 +369,8 @@ public class Keyboard2View extends View
       setBackgroundColor(ckeyboardColor);
       }else{
       TypedArray co = context.getTheme().obtainStyledAttributes(attrs, R.styleable.keyboard, 0, 0);
-      _theme.colorKey. =  co.getColor(R.styleable.keyboard_colorKeyboard, 0);
-      setBackgroundColor(_theme.colorKeyboard);
+      _theme.colorKey. =  co.getColor(R.styleable.keyboard_colorKey, 0);
+      setBackgroundColor(co.getColor(R.styleable.keyboard_colorKeyboard, 0));
     }
     // Set keyboard background opacity
     getBackground().setAlpha(_config.keyboardOpacity);
