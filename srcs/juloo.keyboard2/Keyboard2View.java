@@ -358,7 +358,7 @@ public class Keyboard2View extends View
       setBackgroundColor (keyboardbg);
       }else{
       _theme.keyBgPaint.setColor(_theme.colorKeyboard);
-      setBackgroundColor(_theme.colorkey);
+      setBackgroundColor(_theme.colorKey);
     }
     // Set keyboard background opacity
     getBackground().setAlpha(_config.keyboardOpacity);
