@@ -12,6 +12,7 @@ public class Theme
   // Key colors
   public final int colorKey;
   public final int colorKeyActivated;
+  public final int colorKeyboard;
 
   // Label colors
   public final int lockedColor;
