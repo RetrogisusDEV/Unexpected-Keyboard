@@ -347,6 +347,19 @@ public class Keyboard2View extends View
   @Override
   protected void onDraw(Canvas canvas)
   {
+    // set Keyboard background color
+    String BgColorTheme = String.format ("#%02X%02X%02X%02X", 255, _config.keyColorBgR, _config.keyColorBgG, _config.keyColorBgB);
+    int bg = Color.parseColor (BgColorTheme);
+    String keyboardBgColorTheme = String.format ( "#%02X%02X%02X%02X", 255, _config.keyboardColorBgR, _config.keyboardColorBgG, _config.keyboardColorBgB );
+    int keyboardbg = Color.parseColor (keyboardBgColorTheme);
+    if (_config.customColor)
+    {
+      _theme.keyBgPaint.setColor(bg);
+      setBackgroundColor (keyboardbg);
+      }else{
+      _theme.keyBgPaint.setColor(_theme.colorKeyboard);
+      setBackgroundColor(_theme.colorkey);
+    }
     // Set keyboard background opacity
     getBackground().setAlpha(_config.keyboardOpacity);
     float y = _tc.margin_top;
