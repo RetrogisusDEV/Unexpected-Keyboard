@@ -365,10 +365,10 @@ public class Keyboard2View extends View
     int ckeyboardColor = parseColorHex(cboard);
     if (_config.customColor)
     {
-      _theme.colorKey.setColor(ckeyColor);
+      _theme.colorKey = ckeyColor;
       setBackgroundColor(ckeyboardColor);
       }else{
-      _theme.colorKey.setColor(_theme.colorKey);
+      _theme.colorKey. = R.styleable.keyboard_colorKeyboard;
       setBackgroundColor(_theme.colorKeyboard);
     }
     // Set keyboard background opacity
