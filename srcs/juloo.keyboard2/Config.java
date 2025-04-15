@@ -51,6 +51,13 @@ public final class Config
   public float customBorderLineWidth; // dp
   public int keyOpacity; // 0 - 255
   public int keyActivatedOpacity; // 0 - 255
+  public int keyColorBgR;	// 0 - 255
+  public int keyColorBgB;	 // 0 - 255
+  public int keyColorBgG;	// 0 - 255
+  public int keyboardColorBgR;
+  public int keyboardColorBgB;
+  public int keyboardColorBgG;
+  public boolean customColor;  
   public boolean double_tap_lock_shift;
   public float characterSize; // Ratio
   public int theme; // Values are R.style.*
@@ -143,6 +150,10 @@ public final class Config
     margin_bottom = get_dip_pref_oriented(dm, "margin_bottom", 7, 3);
     key_vertical_margin = get_dip_pref(dm, "key_vertical_margin", 1.5f) / 100;
     key_horizontal_margin = get_dip_pref(dm, "key_horizontal_margin", 2) / 100;
+    // Get Prefs for custom background 
+    keyColorBgR _prefs.getInt("colorKeyboard_red_custom",255);
+    keyColorBgG _prefs.getInt("colorKeyboard_green_custom",255);
+    keyColorBgB _prefs.getInt("colorKeyboard_blue_custom",255);
     // Label brightness is used as the alpha channel
     labelBrightness = _prefs.getInt("label_brightness", 100) * 255 / 100;
     // Keyboard opacity
