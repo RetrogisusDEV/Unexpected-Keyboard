@@ -151,9 +151,10 @@ public final class Config
     key_vertical_margin = get_dip_pref(dm, "key_vertical_margin", 1.5f) / 100;
     key_horizontal_margin = get_dip_pref(dm, "key_horizontal_margin", 2) / 100;
     // Get Prefs for custom background 
-    keyColorBgR _prefs.getInt("colorKeyboard_red_custom",255);
-    keyColorBgG _prefs.getInt("colorKeyboard_green_custom",255);
-    keyColorBgB _prefs.getInt("colorKeyboard_blue_custom",255);
+    customColor = _prefs.getBoolean("colorKeyboard_set", false);
+    keyColorBgR = _prefs.getInt("colorKeyboard_red_custom",255);
+    keyColorBgG =_prefs.getInt("colorKeyboard_green_custom",255);
+    keyColorBgB = _prefs.getInt("colorKeyboard_blue_custom",255);
     // Label brightness is used as the alpha channel
     labelBrightness = _prefs.getInt("label_brightness", 100) * 255 / 100;
     // Keyboard opacity
